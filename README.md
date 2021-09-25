@@ -9,6 +9,7 @@ This project uses a haar cascade classifier in order to detect all faces in real
  This is an object detection algorithm proposed by Viola and Jones that is used to detect facial features. The haar cascade classifier has 4 main stages  :
 ## A. Calculating haar features
  A feature is essentially calculations that are performed on adjacent rectangular regions at a specific location. The calculation involves the summation of pixel intensities at each region and the difference between their sums. Example of haar features:
+
 ![Haar features description](https://static-01.hindawi.com/articles/tswj/volume-2014/753860/figures/753860.fig.001.jpg)
 ## B. Creating Integral Images
 For large images, the features can be hard to determine, and hence to reduce computational complexity we use integral images. An integral image is calculated from the original image in such a way that each pixel is the sum of all pixels lying to the left and above it in the original image. This means that the last pixel would basically be the sum of all pixels in the image. Most of the features will be irrelevant, hence AdaBoost is used to determine the relevant features
